@@ -25,4 +25,5 @@ jobs:
         
       - name: test date
         run: |
-          date '%Y-%m-%d-%T'
+          date
+          date +%F
