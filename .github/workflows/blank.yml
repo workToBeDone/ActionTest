@@ -26,4 +26,4 @@ jobs:
       - name: test date
         run: |
           date
-          echo ${date +%F}
+          echo $(date +%F)
