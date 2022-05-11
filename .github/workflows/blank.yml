@@ -25,5 +25,4 @@ jobs:
         
       - name: test date
         run: |
-          date
-          echo ${date +"%Y-%m-%d-%T"}
+          date '%Y-%m-%d-%T'
