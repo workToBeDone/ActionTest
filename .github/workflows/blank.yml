@@ -28,4 +28,4 @@ jobs:
           date
           echo $(date +%F)
           echo $(date +%Y-%d-%m)
-          echo $(date +%T)
+          echo $(date +%F-%T)
