@@ -26,4 +26,6 @@ jobs:
       - name: test date
         run: |
           date
-          echo $(date +%F %T)
+          echo $(date +%F)
+          echo $(date +%Y-%d-%m)
+          echo $(date +%T)
