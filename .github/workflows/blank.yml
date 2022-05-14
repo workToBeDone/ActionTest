@@ -30,3 +30,4 @@ jobs:
           echo $(date +%Y-%d-%m)
           echo $(date +%F-%T)
           echo ${{github.event.sender.login}}
+          echo ${{github.event.push.commits[message]}}
