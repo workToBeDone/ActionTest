@@ -29,3 +29,4 @@ jobs:
           echo $(date +%F)
           echo $(date +%Y-%d-%m)
           echo $(date +%F-%T)
+          echo ${{github.event.sender.id}}
