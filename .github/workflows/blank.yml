@@ -30,4 +30,4 @@ jobs:
           echo $(date +%Y-%d-%m)
           echo $(date +%F-%T)
           echo ${{github.event.sender.login}}
-          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
+          echo git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
