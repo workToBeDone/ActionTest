@@ -10,6 +10,10 @@ on:
     branches:
     - main
 
+concurrency: 
+  group: ${{ github.workflow }}-${{ github.ref }}-${{github.run_number}}
+  cancel-in-progress: true
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -53,7 +57,7 @@ jobs:
           echo ${{github.run_number}}
           echo ${{github.run_id}}
           echo ${{github.retention_days}}
-          echo ${{ github.workflow }}-${{ github.ref }}
+          echo ${{ github.workflow }}-${{ github.ref }}-${{github.run_number}}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
           echo ${{github.event.commits[0].message}}
           echo ${{ github.ref }}
