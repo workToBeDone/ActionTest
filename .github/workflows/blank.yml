@@ -35,12 +35,8 @@ jobs:
 
       - name: Get tag name
         id: get_tag_name
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
-        
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          ref: ${{ steps.get_tag_name.outputs.VERSION }}        
+        run: LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+          git checkout $LATEST_TAG  
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
