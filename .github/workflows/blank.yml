@@ -50,6 +50,9 @@ jobs:
           echo $(date +%F-%T)
           echo ${{github.event.sender.login}}
           echo ${{github.ref_name}}
+          echo ${{github.run_number}}
+          echo ${{github.run_id}}
+          echo ${{github.retention_days}}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
           echo ${{github.event.commits[0].message}}
           echo ${{ github.ref }}
