@@ -35,5 +35,5 @@ jobs:
           echo ${{github.event.push.title}}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
           
-      - uses: ./.github/actions/cf-setup-action
+      - uses: ./.github/actions
       
