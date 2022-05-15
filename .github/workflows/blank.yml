@@ -50,7 +50,7 @@ jobs:
           echo $(date +%F-%T)
           echo ${{github.event.sender.login}}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
-          echo ${{github.event.commits[0]}}
+          echo ${{github.event.commits[0].message}}
           echo ${{ github.ref }}
           env
           
