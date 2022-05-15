@@ -49,8 +49,8 @@ jobs:
           echo $(date +%Y-%d-%m)
           echo $(date +%F-%T)
           echo ${{github.event.sender.login}}
-          echo ${{github.event.push.title}}
-          echo ${{github.event.commits.length}}
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
+          echo ${{github.event.commits[0]}}
           echo ${{ github.ref }}
           env
           
