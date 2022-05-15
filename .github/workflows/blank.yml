@@ -49,6 +49,7 @@ jobs:
           echo $(date +%Y-%d-%m)
           echo $(date +%F-%T)
           echo ${{github.event.sender.login}}
+          echo ${{github.ref_name}}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
           echo ${{github.event.commits[0].message}}
           echo ${{ github.ref }}
