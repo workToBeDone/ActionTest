@@ -34,3 +34,6 @@ jobs:
           echo ${{github.event.sender.login}}
           echo ${{github.event.push.title}}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
+          
+      - uses: ./.github/workflows/actions
+      
