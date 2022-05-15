@@ -53,6 +53,7 @@ jobs:
           echo ${{github.run_number}}
           echo ${{github.run_id}}
           echo ${{github.retention_days}}
+          echo ${{ github.workflow }}-${{ github.ref }}
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
           echo ${{github.event.commits[0].message}}
           echo ${{ github.ref }}
