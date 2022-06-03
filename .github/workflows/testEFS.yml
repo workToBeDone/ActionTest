@@ -14,3 +14,4 @@ jobs:
           cd efs-utils
           ./build-deb.sh
           sudo apt-get -y install ./build/amazon-efs-utils*deb
+      - run: sudo mkdir -p '~/.m2'
