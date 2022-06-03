@@ -9,4 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - run: git clone https://github.com/aws/efs-utils || /bin/true
+      - run: |
+          git clone https://github.com/aws/efs-utils || /bin/true
+          cd efs-utils
+          ./build-deb.sh
+          sudo apt-get -y install ./build/amazon-efs-utils*deb
