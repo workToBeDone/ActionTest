@@ -74,6 +74,7 @@ jobs:
           git diff --name-only ${{ github.event.before }} ${{ github.event.after }}
           echo ${{github.event.commits[0].message}}
           echo ${{ github.ref }}
+          echo "******************"
           env
           
       #- uses: ./.github/actions
