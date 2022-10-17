@@ -34,3 +34,9 @@ runs:
   - name: Check CF CLI version
     shell: bash
     run: cf --version
+    
+  - name: test
+    shell: bash
+    run: |
+        env
+    
